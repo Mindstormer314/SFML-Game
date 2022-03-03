@@ -1,0 +1,35 @@
+Compilation Command:  g++ Menu\ screen.cpp -I/Users/robertschmidt/Desktop/Coding/C++/SFML/include  -L/Users/robertschmidt/Desktop/Coding/C++/SFML/lib -lsfml-graphics -lsfml-window -lsfml-system   -o game
+
+
+Plan:
+
+window.clear();
+
+place menu items:
+    play
+    info
+    credits
+
+
+if(play is clicked){
+    activescreen = 1;
+}
+if(info is clicked){
+    activescreen = 2;
+}
+if(credits is clicked){
+    activescreen = 3;
+}
+
+switch(activescreen){
+    case 0:
+        menuscreen();
+    case 1:
+        playscreen();
+    case 2:
+        infoscreen();
+    case 3:
+        creditscreen();
+}
+
+window.display();
